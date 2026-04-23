@@ -110,7 +110,7 @@ class Decoder3DBlock(Module):
 # CHANGED: Single dropout_p control knob in UNet
 # ---------------------------------------------------------------------------------
 class UNet(Module):
-    def __init__(self, in_channels, out_channels, dropout_p: float = 0.1):
+    def __init__(self, in_channels, out_channels, dropout_p: float = 0.1, **kwargs):
         super().__init__()
 
         self.enc1 = Encoder3DBlock(in_channels, 32, dropout_p=dropout_p)

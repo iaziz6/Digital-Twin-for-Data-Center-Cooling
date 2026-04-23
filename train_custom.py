@@ -17,6 +17,7 @@
 from physicsnemo.datapipes.cae.mesh_datapipe import MeshDatapipe
 from physicsnemo.distributed import DistributedManager
 import vtk
+# from unet_mc_dropout import UNet
 from physicsnemo.models.unet import UNet
 import matplotlib.pyplot as plt
 from omegaconf import DictConfig
@@ -240,7 +241,7 @@ def main(cfg: DictConfig) -> None:
 
     # Attempt to load latest checkpoint if one exists
     loaded_epoch = load_checkpoint(
-        "./checkpoints",
+        to_absolute_path("./checkpoints"),
         models=model,
         optimizer=optimizer,
         scheduler=scheduler,
@@ -304,7 +305,7 @@ def main(cfg: DictConfig) -> None:
 
         if epoch % 2 == 0 and dist.rank == 0:
             save_checkpoint(
-                "./checkpoints",
+                to_absolute_path("./checkpoints"),
                 models=model,
                 optimizer=optimizer,
                 scheduler=scheduler,
