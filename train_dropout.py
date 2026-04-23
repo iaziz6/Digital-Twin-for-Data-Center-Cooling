@@ -13,24 +13,22 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 from physicsnemo.datapipes.cae.mesh_datapipe import MeshDatapipe
 from physicsnemo.distributed import DistributedManager
 import vtk
-# from unet_mc_dropout import UNet
-from physicsnemo.models.unet import UNet
+from unet_mc_dropout import UNet
 import matplotlib.pyplot as plt
 from omegaconf import DictConfig
 import torch
 import hydra
 import matplotlib.pyplot as plt
 import torch.nn.functional as F
-from physicsnemo.utils import load_checkpoint, save_checkpoint
-from physicsnemo.utils.logging import PythonLogger, LaunchLogger
+from physicsnemo.launch.utils.checkpoint import load_checkpoint, save_checkpoint
+from physicsnemo.launch.logging import PythonLogger, LaunchLogger
 from hydra.utils import to_absolute_path
 from torch.nn.parallel import DistributedDataParallel
 from physicsnemo.utils import StaticCaptureTraining, StaticCaptureEvaluateNoGrad
-from apex import optimizers
+import torch.optim as optim
 import os
 import numpy as np
 
@@ -174,9 +172,12 @@ def main(cfg: DictConfig) -> None:
             broadcast_buffers=dist.broadcast_buffers,
             find_unused_parameters=dist.find_unused_parameters,
         )
+    
 
+    # Training data folder on Windows
+    path = "/mnt/c/Users/iaziz6/Downloads/Training"
     # Initialize the dataset
-    data_dir = to_absolute_path("./datasets/train/")
+    data_dir = to_absolute_path(path)
     dataset = MeshDatapipe(
         data_dir=data_dir,
         file_format="vtu",
@@ -184,7 +185,7 @@ def main(cfg: DictConfig) -> None:
         num_variables=7,
         num_samples=cfg.train_num_samples,
         batch_size=cfg.train_batch_size,
-        num_workers=1,
+        num_workers=4,
         device=dist.device,
         process_rank=dist.rank,
         world_size=dist.world_size,
@@ -192,6 +193,7 @@ def main(cfg: DictConfig) -> None:
         parallel=False,
     )
 
+    path_test = "/mnt/c/Users/iaziz6/Downloads/Training"
     # Initialize the validation dataset
     if dist.rank == 0:
         pos_embed_tensor_val = (
@@ -200,7 +202,7 @@ def main(cfg: DictConfig) -> None:
         pos_embed_tensor_val = pos_embed_tensor_val.repeat(
             cfg.val_batch_size, 1, 1, 1, 1
         )  # repeat along the batch size dim
-        val_data_dir = to_absolute_path("./datasets/test/")
+        val_data_dir = to_absolute_path(path_test)
         val_dataset = MeshDatapipe(
             data_dir=val_data_dir,
             file_format="vtu",
@@ -208,7 +210,7 @@ def main(cfg: DictConfig) -> None:
             num_variables=7,
             num_samples=cfg.val_num_samples,
             batch_size=cfg.val_batch_size,
-            num_workers=1,
+            num_workers=4,
             device=dist.device,
             process_rank=dist.rank,
             world_size=dist.world_size,
@@ -221,7 +223,7 @@ def main(cfg: DictConfig) -> None:
             file_format="vtu",
             variables=["U", "T", "p", "wallDistance", "vtkValidPointMask"],
             num_variables=7,
-            num_samples=16,
+            num_samples=1,
             batch_size=cfg.val_batch_size,
             num_workers=0,
             device=dist.device,
@@ -231,8 +233,10 @@ def main(cfg: DictConfig) -> None:
             parallel=False,
         )
 
-    optimizer = optimizers.FusedAdam(
+    
+    optimizer = optim.Adam(
         model.parameters(), betas=(0.9, 0.999), lr=cfg.start_lr, weight_decay=0.0
+
     )
 
     scheduler = torch.optim.lr_scheduler.ExponentialLR(
@@ -241,18 +245,42 @@ def main(cfg: DictConfig) -> None:
 
     # Attempt to load latest checkpoint if one exists
     loaded_epoch = load_checkpoint(
-        to_absolute_path("./checkpoints"),
+        "./checkpoints",
         models=model,
         optimizer=optimizer,
         scheduler=scheduler,
         device=dist.device,
     )
 
+    train_losses, val_losses = [], []
+    step_log = []       # global step at each train loss record
+    val_step_log = []   # global step at each val loss record
+
+    log_every = cfg.get("log_every_steps", 5)    # log train loss every N steps
+    val_every = cfg.get("val_every_steps", 50)   # run validation every N steps
+
+    global_step = 0
+
+    def _save_loss_curve():
+        fig, ax = plt.subplots()
+        ax.plot(step_log, train_losses, label="Train", linewidth=1, marker=".", markersize=4)
+        if val_step_log:
+            ax.plot(val_step_log, val_losses, label="Val", marker="o", markersize=4)
+        if step_log:
+            ax.set_xlim(left=0, right=max(step_log) * 1.05 + 1)
+        ax.set_xlabel("Step")
+        ax.set_ylabel("MSE Loss")
+        ax.set_title("Training Curve")
+        ax.legend()
+        fig.tight_layout()
+        fig.savefig("loss_curve.png", dpi=120)
+        plt.close(fig)
+
     for epoch in range(max(1, loaded_epoch + 1), cfg.max_epochs + 1):  # epochs
         with LaunchLogger(
             "train", epoch=epoch, num_mini_batch=len(dataset), epoch_alert_freq=1
         ) as log:
-            for i, data in enumerate(dataset):
+            for step_in_epoch, data in enumerate(dataset, 1):
                 optimizer.zero_grad()
                 bs, _, chans = data[0]["x"].shape
 
@@ -278,34 +306,49 @@ def main(cfg: DictConfig) -> None:
                 scheduler.step()
 
                 log.log_minibatch({"Mini-batch loss": loss.detach()})
+                global_step += 1
+                print(
+                    f"Epoch {epoch}/{cfg.max_epochs} | "
+                    f"Step {step_in_epoch}/{len(dataset)} (global {global_step}) | "
+                    f"Loss {loss.item():.6f} | "
+                    f"LR {optimizer.param_groups[0]['lr']:.2e}",
+                    flush=True,
+                )
+
+                if dist.rank == 0 and global_step % log_every == 0:
+                    train_losses.append(loss.detach().item())
+                    step_log.append(global_step)
+                    _save_loss_curve()
+
+                if dist.rank == 0 and global_step % val_every == 0:
+                    val_loss = validation_step(
+                        model,
+                        val_dataset,
+                        pos_embed_tensor_val,
+                        global_step,
+                        plotting=True,
+                        name=f"val_step{global_step}",
+                    )
+                    _ = validation_step(
+                        model,
+                        train_dataset_plotting,
+                        pos_embed_tensor_val,
+                        global_step,
+                        plotting=True,
+                        name=f"train_step{global_step}",
+                    )
+                    val_losses.append(val_loss.item())
+                    val_step_log.append(global_step)
+                    _save_loss_curve()
+
             log.log_epoch({"Learning Rate": optimizer.param_groups[0]["lr"]})
 
         if dist.world_size > 1:
             torch.distributed.barrier()
 
-        if dist.rank == 0:
-            with LaunchLogger("valid", epoch=epoch) as log:
-                train_loss = validation_step(
-                    model,
-                    train_dataset_plotting,
-                    pos_embed_tensor_val,
-                    epoch,
-                    plotting=True,
-                    name="train",
-                )
-                val_loss = validation_step(
-                    model,
-                    val_dataset,
-                    pos_embed_tensor_val,
-                    epoch,
-                    plotting=True,
-                    name="val",
-                )
-                log.log_epoch({"Val loss": val_loss, "Train loss": train_loss})
-
         if epoch % 2 == 0 and dist.rank == 0:
             save_checkpoint(
-                to_absolute_path("./checkpoints"),
+                "./checkpoints",
                 models=model,
                 optimizer=optimizer,
                 scheduler=scheduler,
