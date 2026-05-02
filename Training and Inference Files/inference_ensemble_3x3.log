@@ -1,0 +1,30 @@
+Requested CPU threads: 15
+Torch threads: 15
+OMP_NUM_THREADS=15
+MKL_NUM_THREADS=15
+OPENBLAS_NUM_THREADS=15
+NUMEXPR_NUM_THREADS=15
+TORCH_NUM_THREADS=15
+UNet source: physicsnemo.models.unet.UNet
+Using device: cpu
+VTU file: /mnt/c/Users/iaziz6/Downloads/Training/internal_202.vtu
+Number of ensemble members: 3
+Model 0: /mnt/c/Users/iaziz6/Downloads/Training/checkpoints_ensemble_3x3/ensemble_0/UNet.0.3.mdlus
+Model 1: /mnt/c/Users/iaziz6/Downloads/Training/checkpoints_ensemble_3x3/ensemble_1/UNet.0.3.mdlus
+Model 2: /mnt/c/Users/iaziz6/Downloads/Training/checkpoints_ensemble_3x3/ensemble_2/UNet.0.3.mdlus
+Loaded ensemble member weights from /mnt/c/Users/iaziz6/Downloads/Training/checkpoints_ensemble_3x3/ensemble_0/UNet.0.3.mdlus
+Loaded ensemble member weights from /mnt/c/Users/iaziz6/Downloads/Training/checkpoints_ensemble_3x3/ensemble_1/UNet.0.3.mdlus
+Loaded ensemble member weights from /mnt/c/Users/iaziz6/Downloads/Training/checkpoints_ensemble_3x3/ensemble_2/UNet.0.3.mdlus
+
+Saved:
+  ensemble_3x3_internal_202_metrics.csv
+  ensemble_3x3_internal_202_true_vs_pred_mean_std.csv
+  ensemble_3x3_internal_202_true_vs_pred_mean_std.npz
+
+Metrics using ensemble mean prediction:
+Field      MSE     RMSE      MAE  MaxAbsError  RelRMSE_percent  Mean_Ensemble_Std  Max_Ensemble_Std
+   Ux 0.024053 0.155090 0.119258     0.986129        13.177726           0.078847          0.228101
+   Uy 0.209028 0.457196 0.350844     1.833672        30.044197           0.086991          0.441583
+   Uz 0.168710 0.410744 0.311280     1.872840        39.553551           0.089471          0.446660
+    T 0.480285 0.693026 0.413367     5.956685        63.930878           0.105521          0.720365
+    p 0.074173 0.272346 0.215273     1.341960        27.279440           0.101962          0.431282

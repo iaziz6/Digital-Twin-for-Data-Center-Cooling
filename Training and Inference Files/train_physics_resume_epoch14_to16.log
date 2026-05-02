@@ -1,0 +1,222 @@
+Warp DeprecationWarning: The symbol `warp.context.Device` will soon be removed from the public API. Use `warp.Device` instead.
+/home/iaziz6/Imo_Training/Training/physicsnemo_env/lib/python3.10/site-packages/physicsnemo/distributed/manager.py:415: UserWarning: Could not initialize using ENV, SLURM or OPENMPI methods. Assuming this is a single process job
+  warn(
+[2026-04-30 18:57:51,575][checkpoint][INFO] - Loaded model state dictionary /home/iaziz6/Imo_Training/Training/outputs/checkpoints/UNet.0.14.mdlus to device cuda:0
+[2026-04-30 18:57:51,735][checkpoint][INFO] - Loaded checkpoint file /home/iaziz6/Imo_Training/Training/outputs/checkpoints/checkpoint.0.14.pt to device cuda:0
+[2026-04-30 18:57:51,736][checkpoint][INFO] - Loaded optimizer state dictionary
+[2026-04-30 18:57:51,736][checkpoint][INFO] - Loaded scheduler state dictionary
+[2026-04-30 18:57:51,736][main][INFO] - Using physics-informed training with train_num_samples=100, val_num_samples=6, max_epochs=16, log_every_steps=10, val_every_steps=100.
+Epoch 15/16 | Step 1/100 | Global 1 | Total 0.176535 | Data 0.171311 | NS 2.679193 | T 2.544355 | LR 7.04e-04
+Epoch 15/16 | Step 2/100 | Global 2 | Total 0.160820 | Data 0.154509 | NS 2.815438 | T 3.495271 | LR 7.04e-04
+Epoch 15/16 | Step 3/100 | Global 3 | Total 0.347817 | Data 0.341818 | NS 2.677166 | T 3.321569 | LR 7.04e-04
+Epoch 15/16 | Step 4/100 | Global 4 | Total 0.134069 | Data 0.128280 | NS 2.494280 | T 3.294690 | LR 7.04e-04
+Epoch 15/16 | Step 5/100 | Global 5 | Total 0.171175 | Data 0.166717 | NS 2.052906 | T 2.404845 | LR 7.04e-04
+Epoch 15/16 | Step 6/100 | Global 6 | Total 0.209536 | Data 0.204386 | NS 2.608357 | T 2.541760 | LR 7.04e-04
+Epoch 15/16 | Step 7/100 | Global 7 | Total 0.111380 | Data 0.106620 | NS 2.320421 | T 2.439659 | LR 7.03e-04
+Epoch 15/16 | Step 8/100 | Global 8 | Total 0.112372 | Data 0.107752 | NS 2.460994 | T 2.158170 | LR 7.03e-04
+Epoch 15/16 | Step 9/100 | Global 9 | Total 0.109419 | Data 0.104934 | NS 2.416741 | T 2.067446 | LR 7.03e-04
+Epoch 15/16 | Step 10/100 | Global 10 | Total 0.133926 | Data 0.128888 | NS 2.718909 | T 2.319010 | LR 7.03e-04
+Epoch 15/16 | Step 11/100 | Global 11 | Total 0.336876 | Data 0.331757 | NS 2.758978 | T 2.359721 | LR 7.03e-04
+Epoch 15/16 | Step 12/100 | Global 12 | Total 0.222692 | Data 0.216092 | NS 3.213535 | T 3.386945 | LR 7.03e-04
+Epoch 15/16 | Step 13/100 | Global 13 | Total 0.327292 | Data 0.318786 | NS 3.302422 | T 5.203358 | LR 7.02e-04
+Epoch 15/16 | Step 14/100 | Global 14 | Total 0.160581 | Data 0.150248 | NS 3.893107 | T 6.440798 | LR 7.02e-04
+Epoch 15/16 | Step 15/100 | Global 15 | Total 0.216773 | Data 0.209814 | NS 2.713702 | T 4.245659 | LR 7.02e-04
+Epoch 15/16 | Step 16/100 | Global 16 | Total 0.283065 | Data 0.275828 | NS 3.241993 | T 3.995441 | LR 7.02e-04
+Epoch 15/16 | Step 17/100 | Global 17 | Total 0.140794 | Data 0.133849 | NS 3.767650 | T 3.177099 | LR 7.02e-04
+Epoch 15/16 | Step 18/100 | Global 18 | Total 0.172068 | Data 0.165966 | NS 3.544509 | T 2.557577 | LR 7.01e-04
+Epoch 15/16 | Step 19/100 | Global 19 | Total 0.137958 | Data 0.131688 | NS 3.883403 | T 2.386335 | LR 7.01e-04
+Epoch 15/16 | Step 20/100 | Global 20 | Total 0.112512 | Data 0.105456 | NS 4.414412 | T 2.642083 | LR 7.01e-04
+Epoch 15/16 | Step 21/100 | Global 21 | Total 0.101949 | Data 0.093454 | NS 5.117396 | T 3.376665 | LR 7.01e-04
+Epoch 15/16 | Step 22/100 | Global 22 | Total 0.193995 | Data 0.186396 | NS 4.327661 | T 3.271441 | LR 7.01e-04
+Epoch 15/16 | Step 23/100 | Global 23 | Total 0.133852 | Data 0.127113 | NS 3.917897 | T 2.821748 | LR 7.01e-04
+Epoch 15/16 | Step 24/100 | Global 24 | Total 0.168894 | Data 0.161627 | NS 3.959969 | T 3.307362 | LR 7.00e-04
+[2026-04-30 19:03:09,615][train][INFO] - [100.00%] Mini-Batch Losses: Mini-batch T phy loss =  2.895e+00
+Epoch 15/16 | Step 25/100 | Global 25 | Total 0.249888 | Data 0.243241 | NS 3.752621 | T 2.895120 | LR 7.00e-04
+Epoch 15/16 | Step 26/100 | Global 26 | Total 0.169636 | Data 0.162680 | NS 4.584219 | T 2.371711 | LR 7.00e-04
+Epoch 15/16 | Step 27/100 | Global 27 | Total 0.170805 | Data 0.164386 | NS 4.046652 | T 2.371578 | LR 7.00e-04
+Epoch 15/16 | Step 28/100 | Global 28 | Total 0.132913 | Data 0.127267 | NS 3.399209 | T 2.246618 | LR 7.00e-04
+Epoch 15/16 | Step 29/100 | Global 29 | Total 0.159233 | Data 0.153947 | NS 3.080616 | T 2.206236 | LR 7.00e-04
+Epoch 15/16 | Step 30/100 | Global 30 | Total 0.285952 | Data 0.280476 | NS 3.296685 | T 2.179420 | LR 6.99e-04
+Epoch 15/16 | Step 31/100 | Global 31 | Total 0.170911 | Data 0.165681 | NS 2.568945 | T 2.660634 | LR 6.99e-04
+Epoch 15/16 | Step 32/100 | Global 32 | Total 0.148730 | Data 0.143818 | NS 2.218525 | T 2.693845 | LR 6.99e-04
+Epoch 15/16 | Step 33/100 | Global 33 | Total 0.123966 | Data 0.119560 | NS 1.819068 | T 2.586862 | LR 6.99e-04
+Epoch 15/16 | Step 34/100 | Global 34 | Total 0.094525 | Data 0.089900 | NS 2.176891 | T 2.448221 | LR 6.99e-04
+Epoch 15/16 | Step 35/100 | Global 35 | Total 0.121494 | Data 0.116573 | NS 2.421592 | T 2.499355 | LR 6.99e-04
+Epoch 15/16 | Step 36/100 | Global 36 | Total 0.177720 | Data 0.172871 | NS 2.459694 | T 2.389596 | LR 6.98e-04
+Epoch 15/16 | Step 37/100 | Global 37 | Total 0.173637 | Data 0.169087 | NS 2.254631 | T 2.294733 | LR 6.98e-04
+Epoch 15/16 | Step 38/100 | Global 38 | Total 0.249966 | Data 0.245107 | NS 2.380486 | T 2.478887 | LR 6.98e-04
+Epoch 15/16 | Step 39/100 | Global 39 | Total 0.139030 | Data 0.134478 | NS 2.146622 | T 2.405853 | LR 6.98e-04
+Epoch 15/16 | Step 40/100 | Global 40 | Total 0.277809 | Data 0.272846 | NS 2.405134 | T 2.558728 | LR 6.98e-04
+Epoch 15/16 | Step 41/100 | Global 41 | Total 0.097675 | Data 0.092374 | NS 2.458346 | T 2.841894 | LR 6.97e-04
+Epoch 15/16 | Step 42/100 | Global 42 | Total 0.223350 | Data 0.217362 | NS 2.595748 | T 3.392083 | LR 6.97e-04
+Epoch 15/16 | Step 43/100 | Global 43 | Total 0.122899 | Data 0.117541 | NS 2.392396 | T 2.966337 | LR 6.97e-04
+Epoch 15/16 | Step 44/100 | Global 44 | Total 0.194343 | Data 0.188581 | NS 2.464990 | T 3.296954 | LR 6.97e-04
+Epoch 15/16 | Step 45/100 | Global 45 | Total 0.123240 | Data 0.117362 | NS 2.579349 | T 3.299229 | LR 6.97e-04
+Epoch 15/16 | Step 46/100 | Global 46 | Total 0.137285 | Data 0.131289 | NS 2.513525 | T 3.481894 | LR 6.97e-04
+Epoch 15/16 | Step 47/100 | Global 47 | Total 0.295603 | Data 0.289522 | NS 2.583027 | T 3.497940 | LR 6.96e-04
+Epoch 15/16 | Step 48/100 | Global 48 | Total 0.110970 | Data 0.105772 | NS 2.619397 | T 2.578891 | LR 6.96e-04
+Epoch 15/16 | Step 49/100 | Global 49 | Total 0.116624 | Data 0.111601 | NS 2.947720 | T 2.075191 | LR 6.96e-04
+[2026-04-30 19:08:07,846][train][INFO] - [200.00%] Mini-Batch Losses: Mini-batch T phy loss =  2.200e+00
+Epoch 15/16 | Step 50/100 | Global 50 | Total 0.137748 | Data 0.132234 | NS 3.313156 | T 2.200496 | LR 6.96e-04
+Epoch 15/16 | Step 51/100 | Global 51 | Total 0.493449 | Data 0.487430 | NS 3.443427 | T 2.575994 | LR 6.96e-04
+Epoch 15/16 | Step 52/100 | Global 52 | Total 0.087615 | Data 0.080576 | NS 3.503982 | T 3.534713 | LR 6.96e-04
+Epoch 15/16 | Step 53/100 | Global 53 | Total 0.171981 | Data 0.164780 | NS 2.878900 | T 4.321896 | LR 6.95e-04
+Epoch 15/16 | Step 54/100 | Global 54 | Total 0.260250 | Data 0.252828 | NS 3.030727 | T 4.390589 | LR 6.95e-04
+Epoch 15/16 | Step 55/100 | Global 55 | Total 0.152554 | Data 0.146427 | NS 2.757624 | T 3.369854 | LR 6.95e-04
+Epoch 15/16 | Step 56/100 | Global 56 | Total 0.169698 | Data 0.163425 | NS 3.046151 | T 3.226521 | LR 6.95e-04
+Epoch 15/16 | Step 57/100 | Global 57 | Total 0.120255 | Data 0.115042 | NS 2.578352 | T 2.634207 | LR 6.95e-04
+Epoch 15/16 | Step 58/100 | Global 58 | Total 0.105601 | Data 0.100300 | NS 2.447258 | T 2.853865 | LR 6.95e-04
+Epoch 15/16 | Step 59/100 | Global 59 | Total 0.256576 | Data 0.250553 | NS 2.488993 | T 3.534503 | LR 6.94e-04
+Epoch 15/16 | Step 60/100 | Global 60 | Total 0.106470 | Data 0.101485 | NS 2.192144 | T 2.793406 | LR 6.94e-04
+Epoch 15/16 | Step 61/100 | Global 61 | Total 0.176716 | Data 0.172354 | NS 2.047032 | T 2.314278 | LR 6.94e-04
+Epoch 15/16 | Step 62/100 | Global 62 | Total 0.128641 | Data 0.123709 | NS 2.657010 | T 2.274127 | LR 6.94e-04
+Epoch 15/16 | Step 63/100 | Global 63 | Total 0.165120 | Data 0.160901 | NS 2.225178 | T 1.993758 | LR 6.94e-04
+Epoch 15/16 | Step 64/100 | Global 64 | Total 0.100598 | Data 0.095732 | NS 2.353182 | T 2.512197 | LR 6.93e-04
+Epoch 15/16 | Step 65/100 | Global 65 | Total 0.178250 | Data 0.172087 | NS 2.740467 | T 3.422815 | LR 6.93e-04
+Epoch 15/16 | Step 66/100 | Global 66 | Total 0.157537 | Data 0.151499 | NS 2.831523 | T 3.206522 | LR 6.93e-04
+Epoch 15/16 | Step 67/100 | Global 67 | Total 0.235822 | Data 0.231470 | NS 2.182901 | T 2.168988 | LR 6.93e-04
+Epoch 15/16 | Step 68/100 | Global 68 | Total 0.246183 | Data 0.240057 | NS 3.189658 | T 2.936309 | LR 6.93e-04
+Epoch 15/16 | Step 69/100 | Global 69 | Total 0.209342 | Data 0.204102 | NS 2.910679 | T 2.329624 | LR 6.93e-04
+Epoch 15/16 | Step 70/100 | Global 70 | Total 0.186617 | Data 0.181111 | NS 3.239667 | T 2.266439 | LR 6.92e-04
+Epoch 15/16 | Step 71/100 | Global 71 | Total 0.136999 | Data 0.132215 | NS 2.870632 | T 1.913738 | LR 6.92e-04
+Epoch 15/16 | Step 72/100 | Global 72 | Total 0.200740 | Data 0.194370 | NS 3.340064 | T 3.029717 | LR 6.92e-04
+Epoch 15/16 | Step 73/100 | Global 73 | Total 0.516831 | Data 0.510837 | NS 3.256469 | T 2.737596 | LR 6.92e-04
+Epoch 15/16 | Step 74/100 | Global 74 | Total 0.162437 | Data 0.156200 | NS 2.613226 | T 3.623608 | LR 6.92e-04
+[2026-04-30 19:13:09,258][train][INFO] - [300.00%] Mini-Batch Losses: Mini-batch T phy loss =  3.238e+00
+Epoch 15/16 | Step 75/100 | Global 75 | Total 0.264107 | Data 0.258603 | NS 2.265702 | T 3.238189 | LR 6.92e-04
+Epoch 15/16 | Step 76/100 | Global 76 | Total 0.127464 | Data 0.122697 | NS 2.347527 | T 2.419150 | LR 6.91e-04
+Epoch 15/16 | Step 77/100 | Global 77 | Total 0.164570 | Data 0.159408 | NS 2.568475 | T 2.593636 | LR 6.91e-04
+Epoch 15/16 | Step 78/100 | Global 78 | Total 0.149499 | Data 0.144262 | NS 2.244944 | T 2.992086 | LR 6.91e-04
+Epoch 15/16 | Step 79/100 | Global 79 | Total 0.263977 | Data 0.257170 | NS 2.655593 | T 4.150424 | LR 6.91e-04
+Epoch 15/16 | Step 80/100 | Global 80 | Total 0.218582 | Data 0.211146 | NS 2.630664 | T 4.804582 | LR 6.91e-04
+Epoch 15/16 | Step 81/100 | Global 81 | Total 0.295098 | Data 0.286585 | NS 3.273038 | T 5.240221 | LR 6.91e-04
+Epoch 15/16 | Step 82/100 | Global 82 | Total 0.110776 | Data 0.105044 | NS 2.529931 | T 3.201501 | LR 6.90e-04
+Epoch 15/16 | Step 83/100 | Global 83 | Total 0.214602 | Data 0.208912 | NS 2.706160 | T 2.983952 | LR 6.90e-04
+Epoch 15/16 | Step 84/100 | Global 84 | Total 0.105066 | Data 0.099549 | NS 2.315607 | T 3.201639 | LR 6.90e-04
+Epoch 15/16 | Step 85/100 | Global 85 | Total 0.142627 | Data 0.135936 | NS 2.860562 | T 3.829875 | LR 6.90e-04
+Epoch 15/16 | Step 86/100 | Global 86 | Total 0.161310 | Data 0.155639 | NS 2.531188 | T 3.139137 | LR 6.90e-04
+Epoch 15/16 | Step 87/100 | Global 87 | Total 0.542174 | Data 0.535806 | NS 3.152713 | T 3.214576 | LR 6.89e-04
+Epoch 15/16 | Step 88/100 | Global 88 | Total 0.142143 | Data 0.137179 | NS 1.977755 | T 2.986641 | LR 6.89e-04
+Epoch 15/16 | Step 89/100 | Global 89 | Total 0.176992 | Data 0.170622 | NS 2.867270 | T 3.502353 | LR 6.89e-04
+Epoch 15/16 | Step 90/100 | Global 90 | Total 0.190187 | Data 0.184604 | NS 2.597738 | T 2.985080 | LR 6.89e-04
+Epoch 15/16 | Step 91/100 | Global 91 | Total 0.138763 | Data 0.134669 | NS 1.971052 | T 2.122220 | LR 6.89e-04
+Epoch 15/16 | Step 92/100 | Global 92 | Total 0.150797 | Data 0.145815 | NS 2.357330 | T 2.625403 | LR 6.89e-04
+Epoch 15/16 | Step 93/100 | Global 93 | Total 0.096317 | Data 0.091521 | NS 2.024448 | T 2.771890 | LR 6.88e-04
+Epoch 15/16 | Step 94/100 | Global 94 | Total 0.086729 | Data 0.080334 | NS 2.230547 | T 4.164532 | LR 6.88e-04
+Epoch 15/16 | Step 95/100 | Global 95 | Total 0.137249 | Data 0.129156 | NS 3.100926 | T 4.992724 | LR 6.88e-04
+Epoch 15/16 | Step 96/100 | Global 96 | Total 0.120993 | Data 0.115092 | NS 2.679355 | T 3.222447 | LR 6.88e-04
+Epoch 15/16 | Step 97/100 | Global 97 | Total 0.161244 | Data 0.154783 | NS 3.022522 | T 3.437746 | LR 6.88e-04
+Epoch 15/16 | Step 98/100 | Global 98 | Total 0.088450 | Data 0.083218 | NS 2.350699 | T 2.881561 | LR 6.88e-04
+Epoch 15/16 | Step 99/100 | Global 99 | Total 0.158322 | Data 0.151286 | NS 3.156733 | T 3.878998 | LR 6.87e-04
+[2026-04-30 19:17:50,765][train][INFO] - [400.00%] Mini-Batch Losses: Mini-batch T phy loss =  3.439e+00
+Epoch 15/16 | Step 100/100 | Global 100 | Total 0.076171 | Data 0.069635 | NS 3.097429 | T 3.439378 | LR 6.87e-04
+[2026-04-30 19:19:03,666][train][INFO] - Epoch 15 Metrics: Learning Rate =  6.873e-04, Mini-batch total loss =  4.498e-02, Mini-batch data loss =  4.352e-02, Mini-batch NS phy loss =  7.078e-01, Mini-batch T phy loss =  7.567e-01
+[2026-04-30 19:19:03,670][train][INFO] - Epoch Execution Time:  1.272e+03s, Time/Iter:  3.180e+03ms
+Epoch 16/16 | Step 1/100 | Global 101 | Total 0.117233 | Data 0.112317 | NS 2.396501 | T 2.518964 | LR 6.87e-04
+Epoch 16/16 | Step 2/100 | Global 102 | Total 0.152481 | Data 0.147872 | NS 2.044035 | T 2.565723 | LR 6.87e-04
+Epoch 16/16 | Step 3/100 | Global 103 | Total 0.139986 | Data 0.134935 | NS 2.643438 | T 2.408249 | LR 6.87e-04
+Epoch 16/16 | Step 4/100 | Global 104 | Total 0.071363 | Data 0.067314 | NS 1.939699 | T 2.109030 | LR 6.87e-04
+Epoch 16/16 | Step 5/100 | Global 105 | Total 0.104801 | Data 0.100241 | NS 2.234099 | T 2.326305 | LR 6.86e-04
+Epoch 16/16 | Step 6/100 | Global 106 | Total 0.066287 | Data 0.060698 | NS 2.900251 | T 2.688570 | LR 6.86e-04
+Epoch 16/16 | Step 7/100 | Global 107 | Total 0.107021 | Data 0.101479 | NS 2.544581 | T 2.997493 | LR 6.86e-04
+Epoch 16/16 | Step 8/100 | Global 108 | Total 0.162789 | Data 0.155294 | NS 3.472455 | T 4.022552 | LR 6.86e-04
+Epoch 16/16 | Step 9/100 | Global 109 | Total 0.233692 | Data 0.226196 | NS 3.575209 | T 3.921174 | LR 6.86e-04
+Epoch 16/16 | Step 10/100 | Global 110 | Total 0.122409 | Data 0.115919 | NS 3.384048 | T 3.106066 | LR 6.86e-04
+Epoch 16/16 | Step 11/100 | Global 111 | Total 0.074111 | Data 0.067820 | NS 3.470684 | T 2.820206 | LR 6.85e-04
+Epoch 16/16 | Step 12/100 | Global 112 | Total 0.152978 | Data 0.145560 | NS 3.723215 | T 3.694545 | LR 6.85e-04
+Epoch 16/16 | Step 13/100 | Global 113 | Total 0.135737 | Data 0.129540 | NS 2.804893 | T 3.391496 | LR 6.85e-04
+Epoch 16/16 | Step 14/100 | Global 114 | Total 0.063787 | Data 0.058040 | NS 2.717873 | T 3.028530 | LR 6.85e-04
+Epoch 16/16 | Step 15/100 | Global 115 | Total 0.249684 | Data 0.244339 | NS 2.558073 | T 2.787458 | LR 6.85e-04
+Epoch 16/16 | Step 16/100 | Global 116 | Total 0.257961 | Data 0.252352 | NS 2.935833 | T 2.672858 | LR 6.85e-04
+Epoch 16/16 | Step 17/100 | Global 117 | Total 0.244289 | Data 0.239368 | NS 2.490834 | T 2.430043 | LR 6.84e-04
+Epoch 16/16 | Step 18/100 | Global 118 | Total 0.215600 | Data 0.209273 | NS 3.461629 | T 2.865653 | LR 6.84e-04
+Epoch 16/16 | Step 19/100 | Global 119 | Total 0.098306 | Data 0.091489 | NS 4.007390 | T 2.809729 | LR 6.84e-04
+Epoch 16/16 | Step 20/100 | Global 120 | Total 0.221565 | Data 0.214226 | NS 4.228997 | T 3.109829 | LR 6.84e-04
+Epoch 16/16 | Step 21/100 | Global 121 | Total 0.147270 | Data 0.139275 | NS 3.900300 | T 4.094612 | LR 6.84e-04
+Epoch 16/16 | Step 22/100 | Global 122 | Total 0.185092 | Data 0.178256 | NS 3.430270 | T 3.406431 | LR 6.83e-04
+Epoch 16/16 | Step 23/100 | Global 123 | Total 0.149574 | Data 0.143438 | NS 4.188179 | T 1.948156 | LR 6.83e-04
+Epoch 16/16 | Step 24/100 | Global 124 | Total 0.135590 | Data 0.129222 | NS 3.987931 | T 2.379668 | LR 6.83e-04
+[2026-04-30 19:24:21,972][train][INFO] - [100.00%] Mini-Batch Losses: Mini-batch T phy loss =  2.050e+00
+Epoch 16/16 | Step 25/100 | Global 125 | Total 0.123152 | Data 0.117360 | NS 3.742520 | T 2.049590 | LR 6.83e-04
+Epoch 16/16 | Step 26/100 | Global 126 | Total 0.123723 | Data 0.116625 | NS 3.960019 | T 3.138234 | LR 6.83e-04
+Epoch 16/16 | Step 27/100 | Global 127 | Total 0.160716 | Data 0.154672 | NS 3.706953 | T 2.337124 | LR 6.83e-04
+Epoch 16/16 | Step 28/100 | Global 128 | Total 0.111802 | Data 0.106431 | NS 2.847226 | T 2.524443 | LR 6.82e-04
+Epoch 16/16 | Step 29/100 | Global 129 | Total 0.134907 | Data 0.128368 | NS 3.281521 | T 3.257476 | LR 6.82e-04
+Epoch 16/16 | Step 30/100 | Global 130 | Total 0.109334 | Data 0.103723 | NS 2.308625 | T 3.302316 | LR 6.82e-04
+Epoch 16/16 | Step 31/100 | Global 131 | Total 0.203367 | Data 0.197702 | NS 2.246555 | T 3.418713 | LR 6.82e-04
+Epoch 16/16 | Step 32/100 | Global 132 | Total 0.194201 | Data 0.188123 | NS 2.411047 | T 3.667194 | LR 6.82e-04
+Epoch 16/16 | Step 33/100 | Global 133 | Total 0.257264 | Data 0.252363 | NS 1.845465 | T 3.055493 | LR 6.82e-04
+Epoch 16/16 | Step 34/100 | Global 134 | Total 0.123984 | Data 0.119162 | NS 2.046091 | T 2.775397 | LR 6.81e-04
+Epoch 16/16 | Step 35/100 | Global 135 | Total 0.241745 | Data 0.234062 | NS 2.979338 | T 4.703084 | LR 6.81e-04
+Epoch 16/16 | Step 36/100 | Global 136 | Total 0.275053 | Data 0.270020 | NS 1.955725 | T 3.076697 | LR 6.81e-04
+Epoch 16/16 | Step 37/100 | Global 137 | Total 0.091479 | Data 0.085801 | NS 2.078586 | T 3.599268 | LR 6.81e-04
+Epoch 16/16 | Step 38/100 | Global 138 | Total 0.138777 | Data 0.131845 | NS 2.881842 | T 4.050007 | LR 6.81e-04
+Epoch 16/16 | Step 39/100 | Global 139 | Total 0.243164 | Data 0.237335 | NS 2.654683 | T 3.173975 | LR 6.81e-04
+Epoch 16/16 | Step 40/100 | Global 140 | Total 0.227886 | Data 0.223418 | NS 2.236828 | T 2.231914 | LR 6.80e-04
+Epoch 16/16 | Step 41/100 | Global 141 | Total 0.108085 | Data 0.102785 | NS 2.799520 | T 2.500347 | LR 6.80e-04
+Epoch 16/16 | Step 42/100 | Global 142 | Total 0.150867 | Data 0.145962 | NS 2.563834 | T 2.340731 | LR 6.80e-04
+Epoch 16/16 | Step 43/100 | Global 143 | Total 0.170923 | Data 0.165659 | NS 2.839914 | T 2.424193 | LR 6.80e-04
+Epoch 16/16 | Step 44/100 | Global 144 | Total 0.136022 | Data 0.130966 | NS 2.607252 | T 2.448604 | LR 6.80e-04
+Epoch 16/16 | Step 45/100 | Global 145 | Total 0.127204 | Data 0.121735 | NS 2.829093 | T 2.640240 | LR 6.80e-04
+Epoch 16/16 | Step 46/100 | Global 146 | Total 0.193320 | Data 0.187697 | NS 2.955344 | T 2.667382 | LR 6.79e-04
+Epoch 16/16 | Step 47/100 | Global 147 | Total 0.153706 | Data 0.148191 | NS 3.055109 | T 2.460355 | LR 6.79e-04
+Epoch 16/16 | Step 48/100 | Global 148 | Total 0.173089 | Data 0.167032 | NS 3.215324 | T 2.841461 | LR 6.79e-04
+Epoch 16/16 | Step 49/100 | Global 149 | Total 0.210517 | Data 0.204176 | NS 3.619596 | T 2.721818 | LR 6.79e-04
+[2026-04-30 19:29:21,097][train][INFO] - [200.00%] Mini-Batch Losses: Mini-batch T phy loss =  2.369e+00
+Epoch 16/16 | Step 50/100 | Global 150 | Total 0.151213 | Data 0.145672 | NS 3.172316 | T 2.368779 | LR 6.79e-04
+Epoch 16/16 | Step 51/100 | Global 151 | Total 0.120656 | Data 0.115856 | NS 2.790970 | T 2.009208 | LR 6.79e-04
+Epoch 16/16 | Step 52/100 | Global 152 | Total 0.190246 | Data 0.185573 | NS 2.864332 | T 1.809209 | LR 6.78e-04
+Epoch 16/16 | Step 53/100 | Global 153 | Total 0.155813 | Data 0.150960 | NS 2.672554 | T 2.179911 | LR 6.78e-04
+Epoch 16/16 | Step 54/100 | Global 154 | Total 0.229743 | Data 0.224105 | NS 3.055014 | T 2.582762 | LR 6.78e-04
+Epoch 16/16 | Step 55/100 | Global 155 | Total 0.170591 | Data 0.164862 | NS 2.679138 | T 3.049886 | LR 6.78e-04
+Epoch 16/16 | Step 56/100 | Global 156 | Total 0.141695 | Data 0.134205 | NS 2.804551 | T 4.686141 | LR 6.78e-04
+Epoch 16/16 | Step 57/100 | Global 157 | Total 0.267604 | Data 0.260911 | NS 2.190204 | T 4.503231 | LR 6.78e-04
+Epoch 16/16 | Step 58/100 | Global 158 | Total 0.114858 | Data 0.108534 | NS 2.244141 | T 4.079679 | LR 6.77e-04
+Epoch 16/16 | Step 59/100 | Global 159 | Total 0.151922 | Data 0.146162 | NS 2.458776 | T 3.300949 | LR 6.77e-04
+Epoch 16/16 | Step 60/100 | Global 160 | Total 0.104616 | Data 0.099778 | NS 2.172284 | T 2.665488 | LR 6.77e-04
+Epoch 16/16 | Step 61/100 | Global 161 | Total 0.546850 | Data 0.541555 | NS 2.572516 | T 2.722433 | LR 6.77e-04
+Epoch 16/16 | Step 62/100 | Global 162 | Total 0.131088 | Data 0.126825 | NS 2.109180 | T 2.153263 | LR 6.77e-04
+Epoch 16/16 | Step 63/100 | Global 163 | Total 0.116275 | Data 0.111149 | NS 2.708680 | T 2.417270 | LR 6.77e-04
+Epoch 16/16 | Step 64/100 | Global 164 | Total 0.125821 | Data 0.120706 | NS 2.543260 | T 2.571222 | LR 6.76e-04
+Epoch 16/16 | Step 65/100 | Global 165 | Total 0.091712 | Data 0.085980 | NS 2.896260 | T 2.835877 | LR 6.76e-04
+Epoch 16/16 | Step 66/100 | Global 166 | Total 0.313847 | Data 0.308071 | NS 2.766913 | T 3.009532 | LR 6.76e-04
+Epoch 16/16 | Step 67/100 | Global 167 | Total 0.204582 | Data 0.196836 | NS 3.575758 | T 4.169964 | LR 6.76e-04
+Epoch 16/16 | Step 68/100 | Global 168 | Total 0.138954 | Data 0.131145 | NS 3.013705 | T 4.795339 | LR 6.76e-04
+Epoch 16/16 | Step 69/100 | Global 169 | Total 0.119358 | Data 0.112911 | NS 2.504684 | T 3.942352 | LR 6.76e-04
+Epoch 16/16 | Step 70/100 | Global 170 | Total 0.182215 | Data 0.176850 | NS 2.145341 | T 3.219893 | LR 6.75e-04
+Epoch 16/16 | Step 71/100 | Global 171 | Total 0.236160 | Data 0.230658 | NS 2.486144 | T 3.015723 | LR 6.75e-04
+Epoch 16/16 | Step 72/100 | Global 172 | Total 0.139161 | Data 0.133795 | NS 2.841263 | T 2.524736 | LR 6.75e-04
+Epoch 16/16 | Step 73/100 | Global 173 | Total 0.180568 | Data 0.174449 | NS 2.846633 | T 3.272388 | LR 6.75e-04
+Epoch 16/16 | Step 74/100 | Global 174 | Total 0.266426 | Data 0.259856 | NS 2.908743 | T 3.661631 | LR 6.75e-04
+[2026-04-30 19:34:20,346][train][INFO] - [300.00%] Mini-Batch Losses: Mini-batch T phy loss =  2.953e+00
+Epoch 16/16 | Step 75/100 | Global 175 | Total 0.129481 | Data 0.124257 | NS 2.270089 | T 2.953462 | LR 6.74e-04
+Epoch 16/16 | Step 76/100 | Global 176 | Total 0.089959 | Data 0.084638 | NS 2.445541 | T 2.875726 | LR 6.74e-04
+Epoch 16/16 | Step 77/100 | Global 177 | Total 0.079979 | Data 0.074774 | NS 2.630717 | T 2.574085 | LR 6.74e-04
+Epoch 16/16 | Step 78/100 | Global 178 | Total 0.096246 | Data 0.090913 | NS 2.827308 | T 2.505688 | LR 6.74e-04
+Epoch 16/16 | Step 79/100 | Global 179 | Total 0.222805 | Data 0.217566 | NS 2.539699 | T 2.699401 | LR 6.74e-04
+Epoch 16/16 | Step 80/100 | Global 180 | Total 0.257777 | Data 0.250148 | NS 2.932784 | T 4.696043 | LR 6.74e-04
+Epoch 16/16 | Step 81/100 | Global 181 | Total 0.083664 | Data 0.077786 | NS 2.710065 | T 3.167865 | LR 6.73e-04
+Epoch 16/16 | Step 82/100 | Global 182 | Total 0.193927 | Data 0.188626 | NS 3.286579 | T 2.014028 | LR 6.73e-04
+Epoch 16/16 | Step 83/100 | Global 183 | Total 0.155349 | Data 0.149305 | NS 3.761139 | T 2.283395 | LR 6.73e-04
+Epoch 16/16 | Step 84/100 | Global 184 | Total 0.142555 | Data 0.136021 | NS 3.944817 | T 2.589519 | LR 6.73e-04
+Epoch 16/16 | Step 85/100 | Global 185 | Total 0.233870 | Data 0.225814 | NS 4.600339 | T 3.455767 | LR 6.73e-04
+Epoch 16/16 | Step 86/100 | Global 186 | Total 0.526949 | Data 0.518980 | NS 4.894846 | T 3.074584 | LR 6.73e-04
+Epoch 16/16 | Step 87/100 | Global 187 | Total 0.409330 | Data 0.403023 | NS 4.065963 | T 2.240739 | LR 6.72e-04
+Epoch 16/16 | Step 88/100 | Global 188 | Total 0.125122 | Data 0.119697 | NS 2.900586 | T 2.524113 | LR 6.72e-04
+Epoch 16/16 | Step 89/100 | Global 189 | Total 0.164438 | Data 0.158602 | NS 2.722036 | T 3.113774 | LR 6.72e-04
+Epoch 16/16 | Step 90/100 | Global 190 | Total 0.260436 | Data 0.255502 | NS 2.286628 | T 2.647187 | LR 6.72e-04
+Epoch 16/16 | Step 91/100 | Global 191 | Total 0.080087 | Data 0.074755 | NS 2.855927 | T 2.475979 | LR 6.72e-04
+Epoch 16/16 | Step 92/100 | Global 192 | Total 0.169403 | Data 0.164290 | NS 2.559475 | T 2.553369 | LR 6.72e-04
+Epoch 16/16 | Step 93/100 | Global 193 | Total 0.171127 | Data 0.163935 | NS 2.995196 | T 4.197024 | LR 6.71e-04
+Epoch 16/16 | Step 94/100 | Global 194 | Total 0.454615 | Data 0.445705 | NS 3.200564 | T 5.709338 | LR 6.71e-04
+Epoch 16/16 | Step 95/100 | Global 195 | Total 0.152272 | Data 0.145724 | NS 2.324386 | T 4.223416 | LR 6.71e-04
+Epoch 16/16 | Step 96/100 | Global 196 | Total 0.212527 | Data 0.205021 | NS 2.766071 | T 4.739714 | LR 6.71e-04
+Epoch 16/16 | Step 97/100 | Global 197 | Total 0.334068 | Data 0.328256 | NS 2.423030 | T 3.388772 | LR 6.71e-04
+Epoch 16/16 | Step 98/100 | Global 198 | Total 0.270716 | Data 0.265992 | NS 2.484841 | T 2.239194 | LR 6.71e-04
+Epoch 16/16 | Step 99/100 | Global 199 | Total 0.153546 | Data 0.149141 | NS 2.337974 | T 2.066953 | LR 6.70e-04
+[2026-04-30 19:39:01,033][train][INFO] - [400.00%] Mini-Batch Losses: Mini-batch T phy loss =  2.143e+00
+Epoch 16/16 | Step 100/100 | Global 200 | Total 0.109734 | Data 0.105115 | NS 2.476421 | T 2.142510 | LR 6.70e-04
+[2026-04-30 19:40:15,109][train][INFO] - Epoch 16 Metrics: Learning Rate =  6.703e-04, Mini-batch total loss =  4.416e-02, Mini-batch data loss =  4.269e-02, Mini-batch NS phy loss =  7.224e-01, Mini-batch T phy loss =  7.505e-01
+[2026-04-30 19:40:15,109][train][INFO] - Epoch Execution Time:  1.271e+03s, Time/Iter:  3.179e+03ms
+[2026-04-30 19:40:15,216][checkpoint][INFO] - Saved model state dictionary: /home/iaziz6/Imo_Training/Training/outputs/checkpoints/UNet.0.16.mdlus
+[2026-04-30 19:40:15,307][checkpoint][INFO] - Saved training checkpoint: /home/iaziz6/Imo_Training/Training/outputs/checkpoints/checkpoint.0.16.pt
