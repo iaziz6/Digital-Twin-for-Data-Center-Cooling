@@ -1,0 +1,15 @@
+Using device: cpu
+Loaded model weights from /mnt/c/Users/iaziz6/Downloads/Training/UNet.0.16.mdlus
+
+Saved:
+  internal_115_metrics.csv
+  internal_115_true_vs_pred.csv
+  internal_115_true_vs_pred.npz
+
+Metrics:
+Field     RMSE      MAE  MaxAbsError  RelRMSE_percent
+   Ux 0.114873 0.072943     0.859315         9.769686
+   Uy 0.398655 0.307114     1.821304        26.174170
+   Uz 0.301308 0.201126     2.365411        33.428383
+    T 0.639065 0.340498     6.198310        58.776173
+    p 0.087540 0.064687     0.780557        10.701285

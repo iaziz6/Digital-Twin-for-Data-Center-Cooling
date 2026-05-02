@@ -9,12 +9,12 @@ Using device: cpu
 VTU file: /mnt/c/Users/iaziz6/Downloads/Training/internal_170.vtu
 Baseline model file: /mnt/c/Users/iaziz6/Downloads/Training/checkpoints_baseline_unet/UNet.0.4.mdlus
 Traceback (most recent call last):
-  File "/mnt/c/Users/iaziz6/Downloads/Inference_Unet_Baseline/infer_baseline_unet_15threads.py", line 211, in <module>
+  File "/mnt/c/Users/iaziz6/Downloads/Training/infer_baseline_unet_15threads.py", line 211, in <module>
     main()
   File "/home/imran/physicsnemo-env/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
     return func(*args, **kwargs)
-  File "/mnt/c/Users/iaziz6/Downloads/Inference_Unet_Baseline/infer_baseline_unet_15threads.py", line 141, in main
+  File "/mnt/c/Users/iaziz6/Downloads/Training/infer_baseline_unet_15threads.py", line 141, in main
     model = build_model(device)
-  File "/mnt/c/Users/iaziz6/Downloads/Inference_Unet_Baseline/infer_baseline_unet_15threads.py", line 96, in build_model
+  File "/mnt/c/Users/iaziz6/Downloads/Training/infer_baseline_unet_15threads.py", line 96, in build_model
     raise FileNotFoundError(f"Baseline UNet model file not found: {MODEL_FILE}")
 FileNotFoundError: Baseline UNet model file not found: /mnt/c/Users/iaziz6/Downloads/Training/checkpoints_baseline_unet/UNet.0.4.mdlus

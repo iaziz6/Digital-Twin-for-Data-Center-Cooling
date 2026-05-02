@@ -1,0 +1,22 @@
+Using device: cpu
+[0m[31m2026-05-01 00:07:03.244 (   0.866s) [    755659D00000]       vtkXMLReader.cxx:342    ERR| vtkXMLUnstructuredGridReader (0x59080b41b780): Error opening file /mnt/c/Users/iaziz6/Downloads/Training/internal_185.vtu[0m
+[0m[31m2026-05-01 00:07:03.244 (   0.866s) [    755659D00000]       vtkExecutive.cxx:729    ERR| vtkCompositeDataPipeline (0x59080b40db50): Algorithm vtkXMLUnstructuredGridReader (0x59080b41b780) returned failure for request: vtkInformation (0x59080b4472e0)
+  Debug: Off
+  Modified Time: 192
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_INFORMATION
+  ALGORITHM_AFTER_FORWARD: 1
+  FORWARD_DIRECTION: 0
+
+[0m
+Traceback (most recent call last):
+  File "/mnt/c/Users/iaziz6/Downloads/Training/infer_checkpoint_local.py", line 192, in <module>
+    main()
+  File "/home/imran/physicsnemo-env/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/mnt/c/Users/iaziz6/Downloads/Training/infer_checkpoint_local.py", line 114, in main
+    mesh, pts, T_true, U_true, p_true, wall_distance_grid, valid_flat, valid_grid = load_case_from_vtu(VTU_FILE)
+  File "/mnt/c/Users/iaziz6/Downloads/Training/infer_checkpoint_local.py", line 58, in load_case_from_vtu
+    pts = vtk_to_numpy(mesh.GetPoints().GetData())
+AttributeError: 'NoneType' object has no attribute 'GetData'
